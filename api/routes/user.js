@@ -1,17 +1,11 @@
 const mysql = require('mysql')
-
-const  MYSQL_ADDON_HOST        = process.env.MYSQL_ADDON_HOST || "b2wnv8j339gky6irdwvb-mysql.services.clever-cloud.com"
-const  MYSQL_ADDON_PASSWORD    = process.env.MYSQL_ADDON_PASSWORD || "qWbqvd7y09lzisVBDnE5"
-const  MYSQL_ADDON_PORT        = process.env.MYSQL_ADDON_PORT || "3306"
-const  MYSQL_ADDON_USER        = process.env.MYSQL_ADDON_USER || "umvvsly1qslkep8a"
-const  MYSQL_ADDON_DB          = process.env.MYSQL_ADDON_DB || "b2wnv8j339gky6irdwvb"
-
+ 
 exports.database = mysql.createConnection({
-   host     : MYSQL_ADDON_HOST,
-   user     : MYSQL_ADDON_USER,
-   password : MYSQL_ADDON_PASSWORD,
-   database : MYSQL_ADDON_DB
-}); 
+   host     : 'b2wnv8j339gky6irdwvb-mysql.services.clever-cloud.com',
+   user     : 'umvvsly1qslkep8a',
+   password : 'qWbqvd7y09lzisVBDnE5',
+   database : 'b2wnv8j339gky6irdwvb'
+});
 
 exports.register = function(req, res){
     message = '';
@@ -30,7 +24,13 @@ exports.register = function(req, res){
           message = "Succesfully! Your account has been created.";
           res.send(message)
        });
+ 
     } 
  };
 
- 
+ exports.fetchdb = function(req,res){
+    database.query("SELECT * FROM users",function(err,result,fields){
+       if(err) throw err;
+       console.log(result);
+    })
+ }
