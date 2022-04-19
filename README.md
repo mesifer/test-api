@@ -23,7 +23,7 @@ Get user database
 
 #### POST `api/register`
 
-Allows to register account to database. Require body parser :
+Allows user to register account to database. Require body parser :
 
 ```
 {
