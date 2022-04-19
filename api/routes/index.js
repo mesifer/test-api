@@ -1,3 +1,3 @@
 exports.index = function (req,res) {
-    res.send('Documentation : https://github.com/mesifer/peepay-API')
+    res.send('Documentation : https://github.com/mesifer/test-api')
 }
