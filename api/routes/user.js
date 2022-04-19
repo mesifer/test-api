@@ -11,7 +11,7 @@ exports.database = mysql.createConnection({
    user     : MYSQL_ADDON_USER,
    password : MYSQL_ADDON_PASSWORD,
    database : MYSQL_ADDON_DB
-});
+}); 
 
 exports.register = function(req, res){
     message = '';

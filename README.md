@@ -9,6 +9,8 @@ E-wallet RestAPI using NodeJS, Express, MySQL
 
 https://peepay-beta.herokuapp.com/
 
+alternative : https://peepay-beta.cleverapps.io/
+
 ## Documentation
 
 ### GET Method
