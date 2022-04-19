@@ -7,9 +7,8 @@ E-wallet RestAPI using NodeJS, Express, MySQL
     <img src="https://img.icons8.com/color/100/00000/nodejs.png"/>
 </p>
 
-```
 https://peepay.herokuapp.com/
-```
+
 ## Documentation
 
 ### GET Method
